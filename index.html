@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy 1 Month Anniversary, เบบี๋แบม 💖</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe0ec 0%, #c2e9fb 100%);
+      font-family: 'Mali', 'Itim', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: rgba(255,255,255,0.92);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255,105,180,0.15), 0 1.5px 8px rgba(0,0,0,0.07);
+      padding: 48px 32px 36px 32px;
+      text-align: center;
+      max-width: 420px;
+      border: 2.5px dashed #ffb6d5;
+      position: relative;
+    }
+    .container:before {
+      content: "";
+      position: absolute;
+      top: -18px; left: 30px;
+      width: 48px; height: 48px;
+      background: url('https://fonts.gstatic.com/s/e/notoemoji/latest/1f496/512.webp') no-repeat center/contain;
+      opacity: 0.7;
+      z-index: 1;
+    }
+    h1 {
+      color: #ff69b4;
+      font-size: 2.7rem;
+      margin-bottom: 0.3em;
+      font-family: 'Itim', 'Mali', cursive;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-shadow: 1.5px 2px 6px #ffe0ec, 0 1px 0 #fff;
+    }
+    .heart {
+      font-size: 2.7rem;
+      animation: heartbeat 1s infinite;
+      margin-bottom: 0.2em;
+      text-shadow: 0 2px 8px #ffb6d5;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1);}
+      20%, 60% { transform: scale(1.2);}
+      40%, 80% { transform: scale(0.9);}
+    }
+    .date {
+      color: #a77fa0;
+      margin-bottom: 1.2em;
+      font-size: 1.1rem;
+      font-family: 'Mali', cursive;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .message {
+      font-size: 1.25rem;
+      color: #d14e7b;
+      margin-bottom: 2em;
+      font-family: 'Itim', 'Mali', cursive;
+      font-weight: 400;
+      line-height: 1.7;
+      background: rgba(255,182,213,0.13);
+      border-radius: 18px;
+      padding: 18px 10px 14px 10px;
+      box-shadow: 0 2px 8px rgba(255,182,213,0.08);
+      border: 1.5px solid #ffe0ec;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .counter {
+      font-size: 1.45rem;
+      color: #ff69b4;
+      margin-bottom: 1.2em;
+      font-family: 'Mali', cursive;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 0 #fff, 0 2px 8px #ffb6d5;
+    }
+    .footer {
+      font-size: 1.05rem;
+      color: #a77fa0;
+      margin-top: 2em;
+      font-family: 'Itim', 'Mali', cursive;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .footer span {
+      display: inline-block;
+      margin-top: 0.2em;
+      animation: float 2.5s infinite ease-in-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 24px 6vw 18px 6vw;
+        max-width: 98vw;
+      }
+      h1 { font-size: 2rem; }
+      .heart { font-size: 2rem; }
+      .message { font-size: 1.05rem; }
+      .counter { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart">💖</div>
+    <h1>Happy 1 Month, เบบี๋แบม!</h1>
+    <div class="date">วันครบกัน 22 มิถุนายน 2025</div>
+    <div class="message">
+      ขอบคุณแบมที่อยู่กับเค้ามาด้วยกัน 1 เดือนเต็ม<br>
+      รักแบมแบมมาก ๆ เลยนะคะ 🥺🌹<br>
+      ขอให้เรามีความสุขแบบนี้ไปนาน ๆ เลยนะคะเบบี๋แบม
+    </div>
+    <div class="counter" id="daysCounter"></div>
+    <div class="footer">
+      จาก PW<br>
+      <span style="font-size:1.2em;">💌</span>
+    </div>
+  </div>
+  <script>
+    const startDate = new Date('2025-04-22');
+    const today = new Date();
+    const diffTime = today - startDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+    document.getElementById('daysCounter').textContent = `เราอยู่ด้วยกันมาแล้ว ${diffDays} วัน`;
+  </script>
+</body>
+</html> 
