@@ -122,7 +122,7 @@
   <div class="container">
     <div class="heart">💖</div>
     <h1>Happy 1 Month, เบบี๋แบม!</h1>
-    <div class="date">วันครบกัน 22 มิถุนายน 2025</div>
+    <div class="date">วันคบกัน 22 มิถุนายน 2025</div>
     <div class="message">
       ขอบคุณแบมที่อยู่กับเค้ามาด้วยกัน 1 เดือนเต็ม<br>
       รักแบมแบมมาก ๆ เลยนะคะ 🥺🌹<br>
@@ -134,12 +134,27 @@
       <span style="font-size:1.2em;">💌</span>
     </div>
   </div>
-  <script>
-    const startDate = new Date('2025-04-22');
-    const today = new Date();
-    const diffTime = today - startDate;
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
-    document.getElementById('daysCounter').textContent = `เราอยู่ด้วยกันมาแล้ว ${diffDays} วัน`;
-  </script>
+  <div id="daysCounter"></div>
+
+<script>
+  const startDate = new Date('2025-04-22');
+  const today = new Date();
+
+  const formatDate = (date) => {
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const dd = String(date.getDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+  };
+
+  const diffTime = today - startDate;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+
+  document.getElementById('daysCounter').innerHTML = 
+    `เรารู้จักกันตั้งแต่วันที่ <strong>${formatDate(startDate)}</strong> 
+     จนถึงวันนี้วันที่ <strong>${formatDate(today)}</strong> 
+     เรารู้จักกันมาแล้ว <span style="color: red; font-weight: bold; font-size: 1.2em;">${diffDays}</span> วัน`;
+</script>
+
 </body>
 </html> 
